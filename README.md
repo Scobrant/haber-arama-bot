@@ -18,22 +18,18 @@
 
 ### Hoşgeldin Ekranı
 
-```
 <img width="1919" height="911" alt="resim" src="https://github.com/user-attachments/assets/d649ad59-041f-44b4-9ac3-337420b14320" />
 
-```
 
 ### Sohbet UI
-```
 <img width="1919" height="912" alt="resim" src="https://github.com/user-attachments/assets/a5a95202-8200-4c4d-9b49-c2e122a6829d" />
 
-```
 
 ### Sonuç Ekranı
-```
+
 <img width="1919" height="911" alt="resim" src="https://github.com/user-attachments/assets/84feb197-00c3-4cf0-9321-a8b6b425a256" />
 
-```
+
 
 ---
 
