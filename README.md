@@ -57,28 +57,28 @@ En alakalı haberler sonuç ekranına yansıtır.
 ```
 haber-arama-bot/
 ├── llm/
-│   ├── main.py              # Flask API + AI logic (embedding, scoring)
-│   ├── receiver.py          # Utility receiver
-│   ├── news_database.json   # News articles database
-│   └── newsDatabase.js      # JS version of the database
+│   ├── main.py              
+│   ├── receiver.py         
+│   ├── news_database.json   
+│   └── newsDatabase.js      
 │
 ├── web/
 │   ├── src/
-│   │   ├── App.tsx                      # Main app & state machine
-│   │   ├── index.css                    # Global styles (minimalist theme)
+│   │   ├── App.tsx                      # Ana uygulama
+│   │   ├── index.css                    # Stil
 │   │   ├── components/
-│   │   │   ├── WelcomeScreen.tsx        # Landing / hero screen
-│   │   │   ├── ChatMessage.tsx          # Single message bubble
-│   │   │   └── ChatInput.tsx            # Textarea + send button
+│   │   │   ├── WelcomeScreen.tsx        # Giriş ve Hoşgeldin ekranı
+│   │   │   ├── ChatMessage.tsx          # Tekli mesaj balonları
+│   │   │   └── ChatInput.tsx            # Sohbet Mesaj alanı
 │   │   ├── types/
-│   │   │   └── chat.ts                  # TypeScript types
+│   │   │   └── chat.ts                  
 │   │   └── data/
-│   │       └── newsDatabase.ts          # Frontend news data
+│   │       └── newsDatabase.ts          # Database
 │   ├── package.json
 │   └── vite.config.ts
 │
-├── start.bat                # One-click launcher
-├── run_bot.bat              # Alternative launcher
+├── start.bat                # Ana başlatıcı
+├── run_bot.bat              # ALternatif
 └── .gitignore
 ```
 
