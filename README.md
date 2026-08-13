@@ -78,7 +78,7 @@ haber-arama-bot/
 │   └── vite.config.ts
 │
 ├── start.bat                # Ana başlatıcı
-├── run_bot.bat              # ALternatif
+├── run_bot.bat              # Alternatif
 └── .gitignore
 ```
 
