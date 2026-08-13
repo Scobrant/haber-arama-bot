@@ -15,66 +15,48 @@
 
 ## 📸 Screenshots
 
-> **Replace the placeholders below with actual screenshots once the app is running.**
 
-### Welcome Screen
-<!-- Replace this comment with: ![Welcome Screen](docs/screenshots/welcome.png) -->
+### Hoşgeldin Ekranı
+
 ```
-┌─────────────────────────────────────────┐
-│                                         │
-│         [ Welcome Screen ]              │
-│   Screenshot: docs/screenshots/         │
-│              welcome.png                │
-│                                         │
-└─────────────────────────────────────────┘
+<img width="1919" height="911" alt="resim" src="https://github.com/user-attachments/assets/d649ad59-041f-44b4-9ac3-337420b14320" />
+
 ```
 
-### Chat Interface
-<!-- Replace this comment with: ![Chat Interface](docs/screenshots/chat.png) -->
+### Sohbet UI
 ```
-┌─────────────────────────────────────────┐
-│                                         │
-│         [ Chat Interface ]              │
-│   Screenshot: docs/screenshots/         │
-│              chat.png                   │
-│                                         │
-└─────────────────────────────────────────┘
+<img width="1919" height="912" alt="resim" src="https://github.com/user-attachments/assets/a5a95202-8200-4c4d-9b49-c2e122a6829d" />
+
 ```
 
-### Results Screen
-<!-- Replace this comment with: ![Results Screen](docs/screenshots/results.png) -->
+### Sonuç Ekranı
 ```
-┌─────────────────────────────────────────┐
-│                                         │
-│         [ Results Screen ]              │
-│   Screenshot: docs/screenshots/         │
-│              results.png                │
-│                                         │
-└─────────────────────────────────────────┘
+<img width="1919" height="911" alt="resim" src="https://github.com/user-attachments/assets/84feb197-00c3-4cf0-9321-a8b6b425a256" />
+
 ```
 
 ---
 
-## 🧠 How It Works
+## 🧠 Nasıl Çalışır?
 
 ```
-User answers questions  →  KeyBERT extracts keywords
+Kullanıcı soruyu cevapler  →  KeyBERT anahtar kelimeleri alır
          ↓
-SentenceTransformer (all-MiniLM-L6-v2) embeds answers
+SentenceTransformer (all-MiniLM-L6-v2) cevapları ekler
          ↓
-Cosine similarity search over 50+ news articles
+50'den fazla haberi ilişkilendirir
          ↓
-Top-ranked personalized headlines returned to UI
+En alakalı haberler sonuç ekranına yansıtır.
 ```
 
-1. **The bot asks you ~15 interest questions** via a conversational chat UI
-2. **Your answers are embedded** using `sentence-transformers` (`all-MiniLM-L6-v2`)
-3. **Semantic similarity** is computed against a curated news database
-4. **The most relevant headlines** are ranked and displayed with match scores
+1. **Bot yaklaşık 15 soruyu** kendi ekranında size sorar 
+2. **Cevaplarınızı analiz etmek için** `sentence-transformers` (`all-MiniLM-L6-v2`) kullanılır
+3. **Analiz edilen sonuçlar** database ile hesaplanır
+4. **En yakın sonuçlar** database ile karşılaştırılıp sunulur. 
 
 ---
 
-## 🗂️ Project Structure
+## 🗂️ Proje Yapısı
 
 ```
 haber-arama-bot/
@@ -106,88 +88,16 @@ haber-arama-bot/
 
 ---
 
-## ⚙️ Tech Stack
+## ⚙️ Tercih edilen teknolojiler
 
 | Layer       | Technology                                      |
 |-------------|-------------------------------------------------|
 | **Frontend**| React 18 + TypeScript + Vite                   |
-| **Styling**  | Vanilla CSS (minimalist dark theme)            |
+| **Stil**  | Vanilla CSS (minimalist dark theme)            |
 | **Backend** | Python + Flask + Flask-CORS                     |
 | **AI/NLP**  | `sentence-transformers` (`all-MiniLM-L6-v2`)   |
-| **Keywords**| `KeyBERT`                                       |
-| **Tensors** | PyTorch                                          |
-
----
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-- Python 3.10+
-- Node.js 18+
-- pip
-
-### 1. Clone the repo
-
-```bash
-git clone https://github.com/Scobrant/haber-arama-bot.git
-cd haber-arama-bot
-```
-
-### 2. Install Python dependencies
-
-```bash
-pip install flask flask-cors sentence-transformers keybert torch
-```
-
-### 3. Install frontend dependencies
-
-```bash
-cd web
-npm install
-```
-
-### 4. Run the app
-
-**Option A — One click:**
-```
-Double-click start.bat
-```
-
-**Option B — Manual:**
-
-Terminal 1 (backend):
-```bash
-cd llm
-python main.py
-```
-
-Terminal 2 (frontend):
-```bash
-cd web
-npm run dev
-```
-
-Then open **[http://localhost:5173](http://localhost:5173)** in your browser.
-
----
-
-## 📝 Adding Screenshots
-
-To replace the placeholder images:
-
-1. Run the app
-2. Take screenshots of each screen
-3. Save them to `docs/screenshots/` with these filenames:
-   - `welcome.png`
-   - `chat.png`
-   - `results.png`
-4. Replace the placeholder blocks in this README with:
-   ```md
-   ![Welcome Screen](docs/screenshots/welcome.png)
-   ![Chat Interface](docs/screenshots/chat.png)
-   ![Results Screen](docs/screenshots/results.png)
-   ```
+| **Kelime**| `KeyBERT`                                       |
+| **Tensör** | PyTorch                                          |
 
 ---
 
