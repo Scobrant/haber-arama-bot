@@ -13,7 +13,7 @@
 
 ---
 
-## 📸 Screenshots
+## 📸 Ekran Görüntüleri
 
 
 ### Hoşgeldin Ekranı
