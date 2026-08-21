@@ -1,8 +1,16 @@
 export type MessageRole = 'user' | 'assistant' | 'system';
 
+export interface HaberKaynak {
+  headline: string;
+  source: string;
+  url: string;
+  score: number;
+}
+
 export interface ChatMessage {
   id: string;
   role: MessageRole;
   content: string;
   timestamp: string;
+  sources?: HaberKaynak[];
 }

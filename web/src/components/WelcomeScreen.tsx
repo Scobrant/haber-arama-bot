@@ -1,52 +1,70 @@
 import React from 'react';
-import { Sparkles, Brain, Cpu, ArrowRight } from 'lucide-react';
+import { Search, Brain, Cpu, ArrowRight, Newspaper } from 'lucide-react';
 
 interface WelcomeScreenProps {
   onStart: () => void;
   isLoading?: boolean;
+  aiOnline: boolean;
 }
 
-export const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ onStart, isLoading }) => {
+export const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ onStart, isLoading, aiOnline }) => {
   return (
     <div className="hero-view-container">
       <div className="hero-badge-pill">
-        <Sparkles size={16} />
-        <span>Yapay Zeka Destekli Haber Küratörü</span>
+        <Search size={16} />
+        <span>Yapay Zeka Destekli Haber Arama</span>
       </div>
 
       <div className="hero-avatar-circle">
-        <Brain size={44} />
+        <Newspaper size={44} />
       </div>
 
       <h1 className="hero-title-main">
-        İlgi Alanlarınıza Özel <br />
-        <span className="hero-title-gradient">Haber Algoritması Botu</span>
+        Doğal Dille Haber Ara, <br />
+        <span className="hero-title-gradient">Anında Sonuç Al</span>
       </h1>
 
       <p className="hero-subtitle">
-        Akıllı yapay zeka modellerimiz tercihleriniz ve ilgi alanlarınız hakkında sorular sorar, en güncel haber veritabanı arasından size en uygun başlıkları eşleştirir.
+        Aklınızdaki konuyu kendi cümlelerinizle yazın. Yapay zeka haber
+        arşivini anlayıp size en alakalı başlıkları kaynaklarıyla birlikte sunar.
       </p>
 
       <div className="features-grid">
         <div className="feature-pill">
           <Brain size={16} />
-          <span>Doğal Dil Analizi</span>
+          <span>Semantik Anlama</span>
         </div>
         <div className="feature-pill">
           <Cpu size={16} />
-          <span>Vektörel Semantik Eşleşme</span>
+          <span>Vektör Arama</span>
         </div>
         <div className="feature-pill">
-          <Sparkles size={16} />
-          <span>Kişiselleştirilmiş Akış</span>
+          <Search size={16} />
+          <span>Kaynaklı Yanıt</span>
         </div>
       </div>
 
-      <button className="btn-start-hero" onClick={onStart} disabled={isLoading}>
-        <span>{isLoading ? 'Başlatılıyor...' : 'Testi Başlat'}</span>
+      <button
+        className="btn-start-hero"
+        onClick={onStart}
+        disabled={isLoading || !aiOnline}
+        title={!aiOnline ? 'AI servisi çevrimdışı. Lütfen Python sunucusunu başlatın.' : ''}
+      >
+        <span>
+          {isLoading
+            ? 'Başlatılıyor...'
+            : !aiOnline
+            ? 'AI Kapalı — Sunucu Bekleniyor'
+            : 'Aramaya Başla'}
+        </span>
         <ArrowRight size={20} />
       </button>
+
+      {!aiOnline && (
+        <p className="hero-offline-hint">
+          Lütfen arka planda <code>python main.py</code> komutunu çalıştırın.
+        </p>
+      )}
     </div>
   );
 };
-

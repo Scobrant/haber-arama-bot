@@ -26,8 +26,8 @@ start "React Web Frontend" cmd /k "cd /d "%~dp0web" && npm run dev"
 echo [3/3] Sunucular hazirlaniyor, 4 saniye bekleniyor...
 timeout /t 4 /nobreak > nul
 
-echo Tarayici aciliyor: http://localhost:5173
-start http://localhost:5173
+echo Tarayici aciliyor: http://localhost:3000
+start http://localhost:3000
 
 echo.
 echo ===================================================
